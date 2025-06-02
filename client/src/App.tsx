@@ -26,8 +26,8 @@ function Router() {
     <>
       <Switch>
         <Route path="/" component={() => <Home onSettingsClick={handleSettingsClick} />} />
-        <Route path="/stories" component={Stories} />
-        <Route path="/insights" component={Insights} />
+        <Route path="/stories" component={() => <Stories onSettingsClick={handleSettingsClick} />} />
+        <Route path="/insights" component={() => <Insights onSettingsClick={handleSettingsClick} />} />
         <Route component={NotFound} />
       </Switch>
 

@@ -4,8 +4,13 @@ import { Badge } from '@/components/ui/badge';
 import { TrendingUp, Calendar, Heart, Compass } from 'lucide-react';
 import { storage } from '@/lib/storage';
 import { JournalEntry, IdentitySummary } from '@shared/schema';
+import { BottomNavigation } from '@/components/BottomNavigation';
 
-export default function Insights() {
+interface InsightsProps {
+  onSettingsClick: () => void;
+}
+
+export default function Insights({ onSettingsClick }: InsightsProps) {
   const [entries, setEntries] = useState<JournalEntry[]>([]);
   const [identitySummary, setIdentitySummary] = useState<IdentitySummary | null>(null);
 
@@ -51,7 +56,7 @@ export default function Insights() {
     if (entries.length === 0) return { streak: 0, averagePerWeek: 0, mostActiveDay: 'N/A' };
 
     const entryDates = entries.map(e => new Date(e.timestamp).toDateString());
-    const uniqueDays = [...new Set(entryDates)];
+    const uniqueDays = Array.from(new Set(entryDates));
     
     // Calculate current streak
     let streak = 0;
@@ -302,6 +307,9 @@ export default function Insights() {
           </>
         )}
       </main>
+
+      {/* Bottom Navigation */}
+      <BottomNavigation onSettingsClick={onSettingsClick} />
     </div>
   );
 }

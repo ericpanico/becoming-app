@@ -6,8 +6,13 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/u
 import { Book, Calendar, Download, Eye } from 'lucide-react';
 import { storage } from '@/lib/storage';
 import { Story } from '@shared/schema';
+import { BottomNavigation } from '@/components/BottomNavigation';
 
-export default function Stories() {
+interface StoriesProps {
+  onSettingsClick: () => void;
+}
+
+export default function Stories({ onSettingsClick }: StoriesProps) {
   const [stories, setStories] = useState<Story[]>([]);
   const [selectedStory, setSelectedStory] = useState<Story | null>(null);
   const [showStoryDialog, setShowStoryDialog] = useState(false);
@@ -174,6 +179,9 @@ export default function Stories() {
           )}
         </DialogContent>
       </Dialog>
+
+      {/* Bottom Navigation */}
+      <BottomNavigation onSettingsClick={onSettingsClick} />
     </div>
   );
 }
