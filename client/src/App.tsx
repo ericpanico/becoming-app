@@ -9,7 +9,7 @@ import Stories from '@/pages/stories';
 import Insights from '@/pages/insights';
 import Settings from '@/pages/settings';
 import NotFound from '@/pages/not-found';
-import { Dialog, DialogContent } from '@/components/ui/dialog';
+import { Dialog, DialogContent, DialogTitle } from '@/components/ui/dialog';
 
 function Router() {
   const [showSettings, setShowSettings] = useState(false);
@@ -33,7 +33,9 @@ function Router() {
 
       {/* Settings Modal */}
       <Dialog open={showSettings} onOpenChange={setShowSettings}>
-        <DialogContent className="max-w-md w-full max-h-[90vh] overflow-hidden p-0 sm:rounded-xl">
+        <DialogContent className="max-w-md w-full max-h-[90vh] overflow-hidden p-0 sm:rounded-xl" aria-describedby="settings-description">
+          <DialogTitle className="sr-only">Settings</DialogTitle>
+          <div id="settings-description" className="sr-only">Manage your app settings, API key, and data</div>
           <div className="h-full overflow-y-auto">
             <Settings />
           </div>
