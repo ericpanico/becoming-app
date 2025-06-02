@@ -1,0 +1,179 @@
+# 🌱 Becoming: A Self-Coaching Companion That Tells Your Story
+
+**Becoming** is a progressive web app (PWA) for people who feel stuck, disconnected, or unsure what they want—but know deep down something needs to change. It helps you reflect, reconnect with the forgotten parts of yourself, and move forward through story, not statistics.
+
+> 🧠 This app uses your **own OpenAI API key**, stored locally and securely.
+> 🎤 It also lets you **speak your entries aloud**, using OpenAI Whisper for best-in-class transcription.
+> 🧪 Includes a "**Developer Mode**" for full prompt transparency, so users can see exactly how the AI is generating content.
+
+---
+
+## 🧭 What It *Really* Is
+
+Becoming isn’t a habit tracker. It’s not a goal-setting app. It’s a **conversation**—between you and an intelligent mirror that learns who you are, bit by bit, and helps you become more of that person. It guides you **gently**, in real time, with questions that open doors.
+
+> You don’t need to know what you want. You just need to be willing to show up and speak.
+
+The app responds like a compassionate coach, letting you know why it asked a question, what it's doing with what you said, and where it’s going with you. It’s training, but not all at once—just enough, just when you need it.
+
+Becoming isn’t pushy. You’ll never get a buzzy notification demanding your attention. But like a thoughtful friend, it may reach out with something meaningful:
+
+* “Hey, yesterday you said you were going on a walk this morning. Want to talk about how that went?”
+* “You mentioned being drawn to water—check out this video I found on fountains in desert landscapes.”
+* “Just wondering how you're feeling. Want to talk?”
+
+These nudges aren't reminders—they’re **invitations to re-enter the conversation**. And they are always infused with knowledge of your personal context, such as:
+
+* Special dates (sobriety milestones, birthdays, anniversaries)
+* Recent reflections and patterns
+* Weather, time of day, or opportunities based on your interests ("Perfect disc golf weather today in Georgetown—wanna get out there?")
+
+---
+
+## 🧠 How The AI Is Prompted
+
+All nudges, reflections, and storytelling come from a large language model (LLM) like GPT-4o. The app builds smart prompts by including:
+
+* A current snapshot of your **identity summary**, updated after each session
+* Key **emotional themes** and symbolic language from your recent entries
+* Past dates of importance and any events that are timely
+* Any **recent user intentions** ("I want to try hiking," "I'm curious about building something with my hands")
+
+The LLM is then asked to:
+
+1. **Propose a gentle, context-aware nudge** that sounds like it’s from a caring friend
+2. **Generate questions** that meet therapeutic standards and feel safe, open, and resonant
+3. **Compose a narrative** (if requested) that integrates prior reflections into a creative myth or metaphor the user can relate to
+
+The system prompts the AI with:
+
+* Personality traits and tone of the user, learned over time
+* Recent conversational entries (transcribed or typed)
+* The symbolic/ritual themes emerging from their journey
+* Specific occasion-based triggers (e.g., anniversaries, weather, follow-ups to past plans)
+
+> **Developer Mode**: When enabled, users can view the raw AI prompt sent before each generation. This helps build trust, invites feedback, and demystifies the interaction.
+
+Every time a prompt is sent, the app constructs it dynamically based on the stored summary, last few interactions, and system memory—all done **on-device**, with nothing sent to a server.
+
+This ensures:
+
+* The AI always “remembers” who it’s talking to
+* Nudges feel human and well-timed
+* The tone stays aligned with the user’s story and personality
+
+---
+
+## 🚀 What It Does
+
+* 📓 Prompts you with thoughtful, therapeutic questions—*designed by psychology-informed AI* to help surface emotion, story, and memory
+* 🔄 Builds a symbolic “soulprint” from your reflections and patterns over time
+* 🧘 Offers embodied rituals and creative nudges rooted in your unique preferences and past
+* 📖 Weaves narrative chapters about your evolution—tailored to genre, metaphor, and your chosen lens
+* 🎤 Lets you **speak instead of type**, using **Whisper** to capture raw, natural expression
+* 🔐 Stores everything **encrypted in your browser** only—no data leaves your device
+* 💾 **Export/Import feature** so you never lose your story—securely encrypted JSON file you control
+* 🧪 **Developer Mode** to view prompt structure, debug behavior, and understand exactly how responses are created
+
+---
+
+## 🧠 How It Remembers You
+
+LLMs are stateless—they don’t remember prior interactions unless the data is provided again. Becoming solves this through:
+
+* **Ongoing Context Summaries**: After every entry, the AI updates a summary of who you are becoming—your emotional landscape, key themes, and desires
+* **Selective Recall**: When you speak again, the app includes this profile along with a few recent entries to maintain deep, personalized context
+* **Symbolic Identity Mapping**: The app gradually builds a model of your archetypes, metaphors, tone, and emotional arcs—like a coach who knows your soul
+* **Context-Aware Nudges**: The app monitors for meaningful life dates and real-world conditions (weather, time of day, etc.) to deliver truly human-feeling check-ins
+
+> This means: yes, when you come back tomorrow, the app *will* sound like it remembers who you are.
+
+---
+
+## 🧩 How to Use It (3 Simple Steps)
+
+1. **🔑 Enter Your API Key**
+
+   * Create a key at [https://platform.openai.com/account/api-keys](https://platform.openai.com/account/api-keys)
+   * Paste it into the prompt when the app starts
+   * This key stays on your device and is only used for AI calls (GPT & Whisper)
+
+2. **🌀 Begin the Journey**
+
+   * You’ll be gently prompted with open-ended questions—log your thoughts or speak them aloud
+   * After each entry, the app will briefly tell you what it’s doing with your input: updating your soulprint, identifying emotional themes, preparing to tell your story
+
+3. **📖 Ask For a Story**
+
+   * Tap "Tell me a story about myself" and pick a genre or lens (e.g., "lost astronaut," "elder forest spirit")
+   * The app composes a narrative that blends your recent reflections with your evolving identity
+   * It’s not a summary. It’s a **myth in motion**, personalized to help you *feel seen*.
+
+4. **💾 Back Up or Migrate**
+
+   * Use "Export My Story" to download a securely encrypted copy of your entire journey
+   * Use "Import My Story" to restore your encrypted backup on a new device or browser
+
+5. **🧪 Toggle Developer Mode**
+
+   * Activate full transparency mode in settings
+   * View the full prompt being sent to the LLM in real time before every interaction
+   * Great for learning, debugging, or just curiosity
+
+---
+
+## 📱 Mobile-Friendly
+
+Becoming is a PWA, which means:
+
+* You can **install it like an app** on iOS or Android
+* Tap “Add to Home Screen” from Safari or Chrome
+* It works offline after first load
+* It includes a mobile mic button for voice-to-text journaling
+
+---
+
+## 🛡️ Privacy & Security
+
+* Your API key is **stored only in your browser**, encrypted with AES
+* Your voice recordings are sent directly to OpenAI's Whisper API and deleted after transcription
+* No one sees your data—**you own everything**
+* You can export or wipe your entries at any time
+
+> “Bring your own key” means you are in full control—and you only pay a few cents per use.
+
+---
+
+## 🧰 Built With
+
+| Feature | Tech                                                        |
+| ------- | ----------------------------------------------------------- |
+| UI      | HTML + Tailwind CSS + optional React                        |
+| AI      | OpenAI GPT-4o + Whisper                                     |
+| Voice   | Web Mic → Whisper transcription                             |
+| Storage | Encrypted LocalStorage w/ CryptoJS + optional export/import |
+| Hosting | Replit Deployments (always-on PWA)                          |
+
+---
+
+## 🛠️ Roadmap
+
+* Add support for Claude / Gemini APIs
+* Expand “Book of Becoming” storytelling engine
+* Add narrator personalities (Carl Jung, a storm cloud, your childhood self)
+* Include ambient soundscapes or mood music
+* Allow voice journaling from notification reminders
+* Introduce "Embodiment Tracker" for logging physical rituals and sensations
+* Create "Daily Theme Cards" drawn from your log history
+* Add content-based nudges (e.g., links to music, articles, or videos that match your recent reflections)
+* Add cloud backup option (optional)
+* Add calendar-awareness for nudges tied to life dates and evolving themes
+
+---
+
+## 💬 Final Thought
+
+This isn’t a productivity tool. It’s a **ritual mirror**.
+You don’t need to plan your life. You just need to show up.
+Let it hold your story. Let it whisper back what it hears.
+Let it help you become.
