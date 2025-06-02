@@ -20,7 +20,7 @@ export const identitySummarySchema = z.object({
   summary: z.string(),
   themes: z.array(z.string()),
   emotionalPatterns: z.array(z.string()),
-  growth areas: z.array(z.string()),
+  growthAreas: z.array(z.string()),
   lastUpdated: z.number(),
   entryCount: z.number(),
   daysActive: z.number()
@@ -56,3 +56,15 @@ export const apiKeySchema = z.object({
 });
 
 export type ApiKey = z.infer<typeof apiKeySchema>;
+
+// User Schema (for server storage)
+export const userSchema = z.object({
+  id: z.number(),
+  username: z.string(),
+  password: z.string()
+});
+
+export type User = z.infer<typeof userSchema>;
+
+export const insertUserSchema = userSchema.omit({ id: true });
+export type InsertUser = z.infer<typeof insertUserSchema>;
